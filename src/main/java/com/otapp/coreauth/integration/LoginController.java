@@ -22,6 +22,6 @@ public class LoginController {
 
 	@PostMapping("/")
 	public ResponseEntity<DTOUser> login(@Validated @RequestBody DTOUser user) {
-		return new ResponseEntity<DTOUser>(loginService.login(user), HttpStatus.CREATED);
+		return new ResponseEntity<DTOUser>(loginService.login(user), HttpStatus.OK);
 	}
 }

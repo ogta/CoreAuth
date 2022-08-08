@@ -21,7 +21,7 @@ public class TokenController {
 
 	@PostMapping("/validate")
 	public ResponseEntity<DTOToken> login(@Validated @RequestBody DTOToken token) {
-		return new ResponseEntity<DTOToken>(tokenService.validateToken(token), HttpStatus.CREATED);
+		return new ResponseEntity<DTOToken>(tokenService.validateToken(token), HttpStatus.OK);
 	}
 
 }
